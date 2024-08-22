@@ -14,7 +14,7 @@ def dd_f(x):
    h = 10 ** (-5)
    return (d_f(x + h) - d_f(x)) / h  # second derivative of fun(x)
 
-def newton(x):
+def optimize(x):
     h = 10 ** (-5)  # make it infintely small
     dev_1 = d_f(x0) # first derivative of fun(x)
     dev_2 = dd_f(x0)
