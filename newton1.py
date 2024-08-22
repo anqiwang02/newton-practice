@@ -1,13 +1,3 @@
-from sympy import diff, ln
-from sympy.abc import x
-import math
-
-f = 2*x**2 #function 
-df = diff(f) #first derivative 
-ddf = diff(df) #second derivative 
-print(df)
-print(ddf)
-
 x0=1
 
 #a function of choice
@@ -31,3 +21,15 @@ for i in range(10):
         break
 
 xt
+
+
+#ignore below
+#from sympy import diff, ln
+#from sympy.abc import x
+#import math
+
+#f = 2*x**2 #function 
+#df = diff(f) #first derivative 
+#ddf = diff(df) #second derivative 
+#print(df)
+#print(ddf)
