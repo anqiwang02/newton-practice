@@ -6,27 +6,31 @@ def f(x):
     y = 2 * x**2
     return y
 
-
 def d_f(x):
-    h = 10 ** (-5)  # make it infintely small
-    return (f(x + h) - f(x)) / h  # first derivative of fun(x)
-
+    h = 10 ** (-5)
+    return (f(x + h) - f(x)) / h
 
 def dd_f(x):
-    h = 10 ** (-5)
-    return (d_f(x + h) - d_f(x)) / h  # second derivative of fun(x)
+   h = 10 ** (-5)
+   return (d_f(x + h) - d_f(x)) / h  # second derivative of fun(x)
+
+def newton(x):
+    h = 10 ** (-5)  # make it infintely small
+    dev_1 = d_f(x0) # first derivative of fun(x)
+    dev_2 = dd_f(x0)
+    x1=x0-dev_1/dev_2
+
+    while abs(x1-x0)>=0.01:
+        x0=x1
+        x1=x0-dev_1/dev_2
+        return [x1,dev_1, dev_2]
 
 
-for i in range(10):
-    xt = x0 - d_f(x0) / dd_f(x0)
-    # update the new xt to be x0
-    x0 = xt
-    if abs(xt - x0) == 0:
-        break
 
-xt
-
-
+#def dd_f(x):
+   # h = 10 ** (-5)
+    #return (d_f(x + h) - d_f(x)) / h  # second derivative of fun(x)
+    
 # ignore below
 # from sympy import diff, ln
 # from sympy.abc import x
