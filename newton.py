@@ -1,3 +1,6 @@
+# add a test 
+test = 1+1 
+
 x0 = 1
 
 
